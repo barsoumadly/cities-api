@@ -4,7 +4,7 @@ import connectToDatabase from "./database/connectToDatabase.js";
 import envVariables from "./config/envVariables.js";
 
 const app = express();
-const port = envVariables.PORT || 8000;
+const port = envVariables.PORT;
 
 app.use(express.json());
 
