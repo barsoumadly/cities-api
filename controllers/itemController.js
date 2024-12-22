@@ -33,13 +33,13 @@ const createItem = async function (request, response) {
 
 const updateItem = async function (request, response) {
   const id = request.params.id;
-  const cityObj = request.body;
+  const itemObj = request.body;
   try {
-    const Item = await Item.findByIdAndUpdate(id, cityObj);
+    const item = await Item.findByIdAndUpdate(id, itemObj);
 
     response.status(200).json({
       status: "success",
-      data: Item,
+      data: item,
     });
   } catch (error) {
     response.status(404).json({
